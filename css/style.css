@@ -1,0 +1,276 @@
+html {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    height: 100%;
+}
+
+#main_container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#gradient {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(195, 156, 242);
+    background: linear-gradient(45deg, rgba(195, 156, 242, 1) 0%, rgba(45, 150, 253, 1) 100%);
+}
+
+#title_container,
+#central_panel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+#interaction_panel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+#info_panel {
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 500px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    width: 80%;
+    background-color: #f6f4eb;
+    background: url("https://static.brusheezy.com/system/resources/previews/000/018/482/original/notebook-paper-texture-photoshop-textures.jpg") center / cover;
+    margin: auto;
+}
+
+#card_container {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title_info {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#title_info_iz {
+    color: #363633;
+    background-color: #f6f4eb;
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#title_info_der {
+    color: #f6f4eb;
+    width: 59.5%;
+}
+
+#cristal_title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(65, 68, 71, 0.322);
+    border-radius: 10px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    background-color: #f6f4eb;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card_title {
+    position: relative;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #fff;
+    text-align: left;
+    height: 176px;
+}
+
+#card_bd {
+    background: url('https://concepto.de/wp-content/uploads/2018/04/base-de-datos-min-e1523470739502.jpg') center / cover;
+}
+
+#card_cc {
+    background: url('https://cdn1.adaptixnetworks.com/wp-content/uploads/equipo-de-computo.jpg') center / cover;
+}
+
+#card_cd {
+    background: url('https://www.ceupe.com/images/easyblog_articles/1583/trabajo-analisis-datos.jpg') center / cover;
+}
+
+#card_pa {
+    background: url('https://dominiotic.com/wp-content/uploads/2018/09/programming-journal-overview.jpg') center / cover;
+}
+
+.card_resume {
+    margin: auto;
+    width: 95%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    border-bottom: solid 1px #7a7a78;
+}
+
+.subtopic_title {
+    font-size: 150%;
+    position: absolute;
+    bottom: 0px;
+    vertical-align: baseline;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: rgba(19, 22, 24, 0.377);
+    backdrop-filter: blur(5px);
+}
+
+.card_btn a {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.5s;
+}
+
+.card_btn a:hover {
+    background-color: #2d96fd;
+    color: white;
+}
+
+.nav_bar {
+    position: relative;
+    width: 100%;
+    background-color: #f6f4eb;
+}
+
+.btn_bar {
+    position: relative;
+    background: linear-gradient(to right, rgba(195, 156, 242, 1) 50%, #f6f4eb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.nav_bar>a {
+    text-decoration: none;
+}
+
+.ribbon {
+    padding-right: 25px!important;
+    transition: all .5s ease-out;
+    margin-top: 10px;
+    clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
+}
+
+.ribbon>span {
+    position: relative;
+    display: block;
+    width: 100px;
+}
+
+.stabilo_melon {
+    background-color: rgb(248, 182, 168)!important;
+}
+
+.stabilo_yellow {
+    background-color: rgb(253, 255, 180)!important;
+}
+
+.stabilo_pink {
+    background-color: rgb(247, 194, 214)!important;
+}
+
+.stabilo_blue {
+    background-color: rgb(195, 239, 252)!important;
+}
+
+.stabilo_green {
+    background-color: rgb(215, 248, 143)!important;
+}
+
+.stabilo_purple {
+    background-color: rgb(195, 187, 236)!important;
+}
+
+.ribbon:hover {
+    width: 150%!important;
+}
+
+.ribbon_selected {
+    width: 150%!important;
+}

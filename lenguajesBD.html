@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="gradient"></div>
+        <nav class="w3-bar nav_bar">
+            <a class="w3-bar-item w3-mobile" href="index.html">
+                <span><i class="fa fa-arrow-left"></i> Regresar</span>
+            </a>
+        </nav>
+        <aside class="w3-bar-block w3-cell" style="width:130px">
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_purple" onclick="openLink(event, 'Fade')">
+                <span>
+                    ¿Qu&eacute; es una base de datos?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_blue" onclick="openLink(event, 'Left')">
+                <span>
+                    Lenguajes para Bases de Datos
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_green" onclick="openLink(event, 'Right')">
+                <span>
+                    ¿Qu&eacute; es una base de datos?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_pink " onclick="openLink(event, 'Top')">
+                <span>
+                    ¿Qu&eacute; es una base de datos?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_yellow" onclick="openLink(event, 'Bottom')">
+                <span>
+                    ¿Qu&eacute; es una base de datos?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_melon" onclick="openLink(event, 'Zoom')">
+                <span>
+                    ¿Qu&eacute; es una base de datos?
+                </span>
+            </button>
+        </aside>
+        <div id="interaction_panel" class="w3-cell">
+            <div class="w3-center" id="info_panel">
+                <div class="w3-container w3-padding">Selecciona los temas en el men&uacute; de la izquierda</div>
+
+                <div id="Fade" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>¿Qu&eacute; es una base de datos?</h2>
+                    <p class="w3-justify">
+                        En su forma m&aacute;s simple, es un archivo de registros o <i>entidades</i>, tal como un cat&aacute;logo de tarjetas de biblioteca. Es persistente en el sentido que tanto sus entidades como las relaciones entre ellas son preservadas
+                        de un uso al siguiente.
+                    </p>
+                    <p class="w3-justify">
+                        Oracle define a las bases de datos como
+
+                        <blockquote class="w3-justify">
+                            Una base de datos es una recopilación organizada de información o datos estructurados, que normalmente se almacena de forma electrónica en un sistema informático. Normalmente, una base de datos está controlada por un sistema de gestión de bases de datos
+                            (DBMS). En conjunto, los datos y el DBMS, junto con las aplicaciones asociadas a ellos, reciben el nombre de sistema de bases de datos, abreviado normalmente a simplemente base de datos.
+                        </blockquote>
+                    </p>
+                </div>
+
+                <div id="Left" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Lenguajes para Bases de Datos</h2>
+                    <p class="w3-justify">Tambi&eacute;n son llamados <i>lenguajes de sistemas de datos</i> o DLS (<i>data system languages</i>). Los DSL soportan a menudo dos sublenguajes: el <i>lenguaje de definici&oacute;n de datos, o DDL (<i>data definition language</i>)
+                        y el lenguaje de manipulaci&oacute;n de datos, o DML (<i>data manipulation language</i>)</i>
+                    </p>
+
+                    <p class="w3-justify">
+                        El DDL es un lenguaje para describir los datos y sus relaciones en una base de datos. Se puede generar en un script de objetos de base de datos para:
+                        <ul class="w3-justify">
+                            <li>Mantener una instant&aacute;nea de la estructura de base de datos</li>
+                            <li>COnfigurar un sistema de prueba donde la base de datos act&uacute;e como el sistema de producci&oacute;n, pero sin contener datos</li>
+                            <li>Producir plantillas para los nuevos objetos que se creen bas&aacute;ndose en los existentes</li>
+                        </ul>
+                    </p>
+
+                    <p class="w3-justify">Por su parte, el DML soporta (al menos) operaciones para examinar, insertar, eliminar y modificar datos. Adem&aacute;s, a menudo el DML tiene un lenguaje de consulta, el cual es amigable con el usuario, orientado a la pantalla, interactivo
+                        y relativamente f&aacute;cil de utilizar. Tanto el DDL pueden estar integrados en un lenguaje anfitri&oacute;n, tal como Pascal (Pascal /R), COBOL (SQL) o FORTRAN (DL/I)</p>
+
+                </div>
+
+                <div id="Top" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Slide in from top</h2>
+                    <p>Tokyo is the capital of Japan.</p>
+                    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.
+                    </p>
+                </div>
+
+                <div id="Right" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Slide in from right</h2>
+                    <p>London is the capital city of England.</p>
+                    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
+                    </p>
+                </div>
+
+                <div id="Bottom" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Slide in from bottom</h2>
+                    <p>Paris is the capital of France.</p>
+                    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.
+                    </p>
+                </div>
+
+                <div id="Zoom" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Zoom in</h2>
+                    <p>Tokyo is the capital of Japan.</p>
+                    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
