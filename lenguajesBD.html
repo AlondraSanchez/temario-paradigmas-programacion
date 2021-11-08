@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/script.js"></script>
-    <title>Document</title>
+    <title>3.3.1 Lenguajes para bases de datos</title>
 </head>
 
 <body>
@@ -33,22 +33,32 @@
             </button>
             <button class="w3-bar-item w3-button tablink ribbon stabilo_green" onclick="openLink(event, 'Right')">
                 <span>
-                    ¿Qu&eacute; es una base de datos?
+                   Niveles de abstracci&oacute;n
                 </span>
             </button>
             <button class="w3-bar-item w3-button tablink ribbon stabilo_pink " onclick="openLink(event, 'Top')">
                 <span>
-                    ¿Qu&eacute; es una base de datos?
+                    El modelo relacional
                 </span>
             </button>
             <button class="w3-bar-item w3-button tablink ribbon stabilo_yellow" onclick="openLink(event, 'Bottom')">
                 <span>
-                    ¿Qu&eacute; es una base de datos?
+                    SQL
                 </span>
             </button>
-            <button class="w3-bar-item w3-button tablink ribbon stabilo_melon" onclick="openLink(event, 'Zoom')">
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_melon" onclick="openLink(event, 'DDL')">
                 <span>
-                    ¿Qu&eacute; es una base de datos?
+                    DDL en SQL
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_blue" onclick="openLink(event, 'DML')">
+                <span>
+                    DML en SQL
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_green" onclick="openLink(event, 'Zoom')">
+                <span>
+                    Ejemplo
                 </span>
             </button>
         </aside>
@@ -70,6 +80,7 @@
                             (DBMS). En conjunto, los datos y el DBMS, junto con las aplicaciones asociadas a ellos, reciben el nombre de sistema de bases de datos, abreviado normalmente a simplemente base de datos.
                         </blockquote>
                     </p>
+                    <img src="https://www.hostname.cl/uploads/2020/11/BD.png" alt="Bases de datos" class="figure">
                 </div>
 
                 <div id="Left" class="w3-container city w3-animate-left" style="display:none">
@@ -92,32 +103,239 @@
 
                 </div>
 
-                <div id="Top" class="w3-container city w3-animate-left" style="display:none">
-                    <h2>Slide in from top</h2>
-                    <p>Tokyo is the capital of Japan.</p>
-                    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.
-                    </p>
+                <div id="Right" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Niveles de abstracci&oacute;n</h2>
+                    <div class="w3-cell-row">
+                        <div class="w3-cell w3-center">
+                            <span>&nbsp;</span> <img src="img/niveles-de-abs.jpg" class="figure" alt="Niveles de abstracci&oacute;n en un sistema de base de datos">
+                            <span>&nbsp;</span>
+                        </div>
+                        <div class="w3-cell w3-justify w3-padding">
+                            <p>En el nivel m&aacute;s bajo est&aacute; la <i>vista f&iacute;sica</i>, que describe los discos o tambores f&iacute;sicos reales donde est&aacute;n almacenados los datos.</p>
+                            <p>En el siguiente nivel superior est&aacute; la <i>vista de almacenamiento</i>, que proporciona una estructura a los propios datos f&iacute;sicos.</p>
+                            <p>El siguiente nivel de abstracci&oacute;n es la <i>vista conceptual</i>, que describe c&oacute;mo se organizan los datos.</p>
+                            <p>Finalmente, hay posiblemente varias <i>vistas externas</i> para una base de datos. Estas vistas son observadas y empleadas por el usuario, con frecuencia a trav&eacute;s del lenguaje de consulta.</p>
+
+                        </div>
+                    </div>
                 </div>
 
-                <div id="Right" class="w3-container city w3-animate-left" style="display:none">
-                    <h2>Slide in from right</h2>
-                    <p>London is the capital city of England.</p>
-                    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
+                <div id="Top" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>El modelo relacional</h2>
+                    <p class="w3-justify">
+                        El modelo relacional proporcionó una forma estándar de representar y consultar datos que podía utilizarse en cualquier aplicación. Desde el principio, los desarrolladores se dieron cuenta de que la virtud principal del modelo de base de datos relacional
+                        era el uso de tablas, ya que era una forma intuitiva, eficiente y flexible de almacenar y acceder a información estructurada.
+                    </p>
+                    <p class="w3-justify">
+                        El modelo relacional define la implementación lógica de la información del negocio mediante una serie de tablas, campos, restricciones, relaciones entre las mismas, etc… que deben reflejar la semántica del negocio. Esta semántica es captada por el área
+                        TI y descrita en los sistemas de gestión de bases de datos,
                     </p>
                 </div>
 
                 <div id="Bottom" class="w3-container city w3-animate-left" style="display:none">
-                    <h2>Slide in from bottom</h2>
-                    <p>Paris is the capital of France.</p>
-                    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.
+                    <h2>SQL</h2>
+                    <p class="w3-justify">SQL viene de las siglas <i>Structured Query Language</i> (Lenguaje de consulta Estructurado). Sus fundamentos son una combinaci&oacute;n de &aacute;lgebra y de c&aacute;lculo relacionales. Su importancia radica en que ha sido estandarizado
+                        por el American National Standards Institute y la International Standards Organization</p>
+                    <p class="w3-justify">
+                        La publicaci&oacute;n de un &eacute;standar tiene muchas ventajas, ya que hace que las aplicaciones sean transportables de una m&aacute;quina a otra y puedan utilizarse por mucho tiempo; los sistemas puedan comunicarse de uno a otro, y los clientes pueden
+                        elegir la versi&oacute;n completa o un subconjunto del mismo lenguaje, seg&uacute;n sea necesario.
+                    </p>
+                    <img src="http://2.bp.blogspot.com/_-BCHr5tNQPY/S9cg-JNgKnI/AAAAAAAAAGo/AISz7nqPbY4/s1600/Dibujo9.bmp" alt="SQL" class="figure-50">
+                </div>
+
+                <div id="DDL" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>DDL en SQL</h2>
+                    <p class="w3-justify">
+                        Como se ha mencionado, DDL (Data Definition Language) es el conjunto de instrucciones agrupadas en un lenguaje que nos permite definir las estructuras que almacenar&aacute;n los datos as&iacute; como los procedimientos y funciones que permitir&aacute;n
+                        consultarlos.
+                    </p>
+                    <p class="w3-justify">
+                        Para definir las estructura en SQL existen tres sentencias:
+                        <ul class="w3-justify">
+                            <li><b>CREATE</b>: se utiliza para crear una base de datos, una tabla, una vista, etc.</li>
+                            <li><b>ALTER</b>: se utiliza para modificar la estructura, por ejemplo, a&ntilde;adir o borrar columnas de una tabla.</li>
+                            <li><b>DROP:</b> con esta sentencia, se pueden eliminar objetos de la estructura, como pueden ser tablas.</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div id="DML" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>DML en SQL</h2>
+                    <p class="w3-justify">
+                        Como ya se mencion&oacute;, Data Manipulation Language (DML) se resume en el conjunto de instrucciones SQL que permite a los usuarios introducir datos para posteriormente realizar tareas de consultas o modificación de los datos que contienen las Bases
+                        de Datos.
+                    </p>
+                    <p class="w3-justify">
+                        Los elementos que se utilizan para manipular los datos en SQL son los siguientes:
+                        <ul class="w3-justify">
+                            <li><b>INSERT</b>: inserta registros o filas en una tabla.</li>
+                            <li><b>SELECT</b>: muestra iunformaci&oacute;n sobre los datos almacenados en la base de datos, que puede pertenecer a una o varias tablas.</li>
+                            <li><b>UPDATE</b>: Actualiza informaci&oacute;n de una tabla.</li>
+                            <li><b>DELETE</b>: Borra registros o filas de una tabla.</li>
+                        </ul>
                     </p>
                 </div>
 
                 <div id="Zoom" class="w3-container city w3-animate-left" style="display:none">
-                    <h2>Zoom in</h2>
-                    <p>Tokyo is the capital of Japan.</p>
-                    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.
+                    <h2>Ejemplo</h2>
+                    <p class="w3-justify">
+                        Para este ejemplo, imaginemos que somos due&ntilde;os de una tienda que vende productos varios, y queremos llevar un registro de todos los productos que vendemos. Entonces tendremos que crear una tabla que registre los productos, por ejemplo:
                     </p>
+                    <table class="w3-table w3-striped w3-border w3-centered">
+                        <tr class="w3-blue">
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad en stock</th>
+                        </tr>
+                        <tr>
+                            <td>Galletas</td>
+                            <td>$15</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Ligas para el cabello</td>
+                            <td>$10</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Audifonos</td>
+                            <td>$30</td>
+                            <td>12</td>
+                        </tr>
+                    </table>
+                    <p class="w3-justify">
+                        Ahora imaginemos que tambi&eacute;n deseamos llevar un registro de las categor&iacute;as de productos que vendemos
+                    </p>
+                    <table class="w3-table w3-striped w3-border w3-centered">
+                        <tr class="w3-blue">
+                            <th>Categoria</th>
+                        </tr>
+                        <tr>
+                            <td>Abarrotes</td>
+                        </tr>
+                        <tr>
+                            <td>Belleza</td>
+                        </tr>
+                        <tr>
+                            <td>electrónica</td>
+                        </tr>
+                    </table>
+                    <p class="w3-justify">
+                        En un modelo relacional, se puede ver gr&aacute;ficamente el ejemplo descrito anteriormente en un diagrama llamado Entidad-Relaci&oacute;n, de la siguiente manera
+                    </p>
+                    <img src="img/ejemplo-bd.png" class="figure" alt="Modelo relacional">
+
+                    <p class="w3-justify">
+                        El diagrama es simple, los rectangulos representan todas aquellas <i>Entidades</i> que forman parte del negocio que se est&aacute; modelando, mientras que el rombo representa la <i>Relaci&oacute;n</i> que existe entre las entidades.
+                        En este caso, el diagrama se puede leer como que la entidad <b>Producto</b> tiene una <b>Categor&iacute;a.</b>
+                    </p>
+                    <p class="w3-justify">
+                        A partir de este diagrama, se puede dise&ntilde;ar una base de datos:
+                        <ol class="w3-justify">
+                            <li>Se crea la base de datos</li>
+                            <li>Se crea una tabla llamada Producto, con los campos que se quieran guardar
+                            </li>
+                            <li>Se crea una tabla llamada Categoria, con sus respectivos campos</li>
+                            <li>Se crea una tercera tabla <i>Tiene</i> que servir&aacute; para relacionar los registros de ambas tablas</li>
+                        </ol>
+                        <table class="w3-table w3-striped w3-border w3-centered">
+                            <tr class="w3-blue">
+                                <th>Producto</th>
+                                <th>Categoria</th>
+                            </tr>
+                            <tr>
+                                <td>Galletas</td>
+                                <td>Abarrotes</td>
+
+                            </tr>
+                            <tr>
+                                <td>Ligas para el cabello</td>
+                                <td>Belleza</td>
+
+                            </tr>
+                            <tr>
+                                <td>Audifonos</td>
+                                <td>Electr&oacute;nica</td>
+                            </tr>
+                        </table>
+                    </p>
+
+
+                    <blockquote class="w3-justify"><b>Nota: </b>Los campos de la tabla <b>Tiene</b> deben ser identificadores &uacute;nicos de las tablas que est&aacute; relacionando. En este caso, la tabla podr&iacute;a formarse con el campo "Producto" de la tabla Producto y el campo
+                        "Categoria" de la clase categoria, pero tambi&eacute;n podria agregarse un campo adicional a ambas tablas que funcione como un ID &uacute;nico. De manera que las tablas quedar&iacute;n de la siguiente manera.</blockquote>
+
+                    <p>Tabla Producto</p>
+                    <table class="w3-table w3-striped w3-border w3-centered">
+                        <tr class="w3-blue">
+                            <th class="w3-light-green">ID del producto</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad en stock</th>
+                        </tr>
+                        <tr>
+                            <td>PROD1</td>
+                            <td>Galletas</td>
+                            <td>$15</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>PROD2</td>
+                            <td>Ligas para el cabello</td>
+                            <td>$10</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>PROD3</td>
+                            <td>Audifonos</td>
+                            <td>$30</td>
+                            <td>12</td>
+                        </tr>
+                    </table>
+
+                    <p>Tabla Categoria</p>
+
+                    <table class="w3-table w3-striped w3-border w3-centered">
+                        <tr class="w3-blue">
+                            <th class="w3-light-green">ID de categoria</th>
+                            <th>Categoria</th>
+                        </tr>
+                        <tr>
+                            <td>CAT1</td>
+                            <td>Abarrotes</td>
+
+                        </tr>
+                        <tr>
+                            <td>CAT2</td>
+                            <td>Belleza</td>
+
+                        </tr>
+                        <tr>
+                            <td>CAT3</td>
+                            <td>Electr&oacute;nica</td>
+                        </tr>
+                    </table>
+                    <p>Tabla Tiene</p>
+                    <table class="w3-table w3-striped w3-border w3-centered">
+                        <tr class="w3-blue">
+                            <th>ID de producto</th>
+                            <th>ID de categoria</th>
+                        </tr>
+                        <tr>
+                            <td>PROD1</td>
+                            <td>CAT1</td>
+
+                        </tr>
+                        <tr>
+                            <td>PROD2</td>
+                            <td>CAT2</td>
+
+                        </tr>
+                        <tr>
+                            <td>PROD3</td>
+                            <td>CAT3</td>
+                        </tr>
+                    </table>
+                    <p class="w3-justify">Es posible que sea menos intuitiva la tabla Tiene, pero cuando se tienen grandes cantidades de datos es mejor organizarlo de esta manera para que no existan errores o referencias err&oacute;neas</p>
                 </div>
 
             </div>

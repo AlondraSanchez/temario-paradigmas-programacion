@@ -45,14 +45,16 @@ html {
 #info_panel {
     padding-left: 50px;
     padding-right: 50px;
-    height: 500px;
+    height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
     width: 80%;
     background-color: #f6f4eb;
-    background: url("https://static.brusheezy.com/system/resources/previews/000/018/482/original/notebook-paper-texture-photoshop-textures.jpg") center / cover;
+    background: url("https://img.freepik.com/foto-gratis/textura-papel-arrugado-blanco_53876-95917.jpg?size=338&ext=jpg") center / cover;
     margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 #card_container {
@@ -273,4 +275,16 @@ html {
 
 .ribbon_selected {
     width: 150%!important;
+}
+
+.figure {
+    width: 100%;
+}
+
+.figure-50 {
+    width: 50%;
+}
+
+.prueba {
+    width: 50%;
 }
