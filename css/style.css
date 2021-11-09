@@ -285,6 +285,42 @@ html {
     width: 50%;
 }
 
-.prueba {
-    width: 50%;
+.figure-80 {
+    width: 80%;
+}
+
+#fortran_icon {
+    background: url(https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/b/b8/Fortran_logo.svg/1200px-Fortran_logo.svg.png) center / cover;
+}
+
+#matlab_icon {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/667px-Matlab_Logo.png) center / cover;
+}
+
+#scilab_icon {
+    background: url(https://avatars.githubusercontent.com/u/16873035?s=280&v=4) center / cover;
+}
+
+#GNU_icon {
+    background: url(https://user-images.githubusercontent.com/52218/81157153-f9f20980-8f86-11ea-9a37-7bdb869326fc.png) center / cover;
+}
+
+#comsol_icon {
+    background: url(https://download.cahdroid.com/wp-content/uploads/2021/03/Comsol-Multiphysics-Free-Download.jpg) center / cover;
+}
+
+.language_icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.language_list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.language_info {
+    padding-right: 20px;
+    padding-left: 20px;
 }

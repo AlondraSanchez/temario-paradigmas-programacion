@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+    <title>3.3.2 Lenguajes para c&oacute;mputo cient&iacute;fico</title>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="gradient"></div>
+        <nav class="w3-bar nav_bar">
+            <a class="w3-bar-item w3-mobile" href="index.html">
+                <span><i class="fa fa-arrow-left"></i> Regresar</span>
+            </a>
+        </nav>
+        <aside class="w3-bar-block w3-cell" style="width:130px">
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_purple" onclick="openLink(event, 'Intro')">
+                <span>
+                    ¿Qu&eacute; es el c&oacute;mputo cient&iacute;fico?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_green" onclick="openLink(event, 'Model')">
+                <span>
+                    Modelos matem&aacute;ticos
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_melon" onclick="openLink(event, 'Aplicaciones')">
+                <span>
+                    Aplicaciones
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_blue" onclick="openLink(event, 'Lenguajes')">
+                <span>
+                    Lenguajes utilizados
+                </span>
+            </button>
+        </aside>
+        <div id="interaction_panel" class="w3-cell">
+            <div class="w3-center" id="info_panel">
+                <div class="w3-container w3-padding">Selecciona los temas en el men&uacute; de la izquierda</div>
+
+                <div id="Intro" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>¿Qu&eacute; es el c&oacute;mputo cient&iacute;fico?</h2>
+                    <p class="w3-justify">
+                        Computaci&oacute;n Cient&iacute;fica es la ciencia aplicada que se encarga de desarrollar los MODELOS MATEM&Aacute;TICOS y computacionales de los procesos vinculados a los problemas cient&iacute;ficos o tecnol&oacute;gicos de las ciencias naturales o
+                        de la ingenier&iacute;a. Estos modelos sirven para manipular y controlar el problema real al que representan.
+                    </p>
+                    <p class="w3-justify">
+                        En la actualidad la mayor&iacute;a (o quiz&aacute; todas) de las &aacute;reas de la ingenier&iacute;a utilizan computadoras para realizar modelos. Las trayectorias de los sat&eacute;lites y de las misiones espaciales est&án completamente computarizadas.
+                        Los ingenieros utilizan computadoras para simular el flujo de aire alrededor de un avi&oacute;n o de cualquier otro veh&iacute;lo aeroespacial que atraviesa la atm&oacute;sfera. Modelar nuevos diseños en una computadora puede ahorrar
+                        much&iacute;simo dinero en comparaci&oacute;n a construir m&uacute;ltiples prototipos. Lo mismo sucede al diseñar autom&oacute;viles o muchos otros productos, incluso computadoras nuevas.
+                    </p>
+                    <img src="https://www.bristol.ac.uk/media-library/sites/study/undergraduate/images/subject/Phys-Sci-Comp_careers.jpg" alt="Bases de datos" class="figure-50">
+                </div>
+
+                <div id="Model" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Modelos matem&aacute;ticos</h2>
+                    <p class="w3-justify">
+                        Ya que la computaci&oacute;n cient&iacute;fica se encarga de recrear modelos matem&aacute;ticos en computadoras, es necesario saber c&oacute;mo se crean los modelos matem&aacute;ticos.
+                    </p>
+                    <p class="w3-justify">
+                        La formulaci&oacute;n de un modelo matem&aacute;tico se comienza estableciendo los factores que se deben considerar. En muchos problemas de f&iacute;sica, por ejemplo, los factores estan relacionados al balance de fuerzas y otras leyes de conservaci&oacute;n
+                        de la f&iacute;sica. Una vez considerados los factores involucrados, se plantea una soluci&oacute;n al problema. Para muchos problemas, las soluciones exactas raramente se pueden encontrar, en esos casos la solucion se debe aproximar
+                        mediante alg&uacute;n m&eacute;todo. Es importante que el modelo dise&ntilde;ado pueda ser <i>computable</i>, es decir, que lo pueda resolver una computadora.
+                    </p>
+                    <p class="w3-justify">
+                        Una vez que se encontr&oacute; una soluci&oacute;n computable, el siguiente paso es la <i>validaci&oacute;n del modelo</i>. Esto significa que se debe verificar que la soluci&oacute;n computada es lo suficientemente precisa para
+                        sevir a los fines para los que se construy&oacute; el modelo.
+                    </p>
+                    <img src="img/flowchart.png" alt="Diagrama de flujo para crear modelos matem&aacute;ticos" class="figure-80">
+                </div>
+                <div id="Aplicaciones" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Aplicaciones de la computaci&oacute;n cient&iacute;fica</h2>
+
+                    <h3 class="w3-justify">Simulaciones num&eacute;ricas</h3>
+                    <p class="w3-justify">
+                        La simulaci&oacute;n num&eacute;rica es una herramienta eficaz en las ciencias aplicadas, para la determinaci&oacute;n de soluciones y la predicci&oacute;n del comportamiento de las mismas, sin recurrir a la experimentaci&oacute;n. Permite la recreaci&oacute;n
+                        matem&aacute;tica de procesos f&iacute;sicos que aparecen con frecuencia en el &aacute;rea de Ingenier&iacute;a.
+                    </p>
+                    <p class="w3-justify">Algunos de sus objetivos son:</p>
+                    <ul class="w3-justify">
+                        <li>Reconstruir y comprender los eventos conocitos (como terremotos, maremotos y otros desastres narutales).</li>
+                        <li>Predecir el futuro o situaciones no observadas (como el tiempo atmosf&eacute;rico, comportamiento de part&iacute;culas subat&oacute;micas).</li>
+                    </ul>
+                    </p>
+
+                    <h3 class="w3-justify">Modelos apropiados y an&aacute;lisis de datos</h3>
+                    <p class="w3-justify">Algunos de sus objetivos son:</p>
+                    <ul class="w3-justify">
+                        <li>Sintonizar apropiadamente los modelos o resolver ecuaciones para reflejar ciertas observaciones, sujetas a las restricciones del modelo (como la exploraci&oacute;n geof&iacute;sica del petr&oacute;leo o la lingüistica computacional).</li>
+                        <li>Usar teor&iacute;a de grafos para modelar redes, especialmente las conexiones individuales, organizaciones y sitios web.</li>
+                    </ul>
+                    </p>
+
+                    <h3 class="w3-justify">Optimizaci&oacute;n</h3>
+                    <p class="w3-justify">El c&oacute;mputo cient&iacute;fico se utiliza para optimizar escenarios desconocidos, como las t&eacute;cnicas y procesos de fabricaci&oacute;n o las interfaces de ingenier&iacute;a.
+                    </p>
+                </div>
+                <div id="Lenguajes" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Lenguajes utilizados para el c&oacute;mputo cient&iacute;fico</h2>
+                    <p class="w3-justify">
+                        Los lenguajes de programaci&oacute;n com&uacute;nmente usados para los aspectos m&aacute;s matem&aacute;ticos de las aplicaciones de la computaci&oacute;n cient&iacute;fica incluyen:
+                    </p>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="fortran_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">Fortran</h3>
+                            <p class="w3-justify">
+                                Fortran (contracci&oacute;n del ingl&eacute;s Formula Translating System) es un lenguaje de programaci&oacute;n de alto nivel de prop&oacute;sito general, procedimental e imperativo, que est&aacute; especialmente adaptado al c&aacute;lculo num&eacute;rico
+                                y a la computaci&oacute;n cient&iacute;fica.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="matlab_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">MATLAB</h3>
+                            <p class="w3-justify">
+                                La plataforma de MATLAB est&aacute; optimizada para resolver problemas cient&iacute;ficos y de ingenier&iacute;a. El lenguaje de MATLAB, basado en matrices, es la forma m&aacute;s natural del mundo para expresar las matem&aacute;ticas computacionales.
+                                Las gr&aacute;ficas integradas facilitan la visualizaci&oacute;n de los datos y la obtenci&oacute;n de informaci&oacute;n a partir de ellos. Una vasta biblioteca de herramientas (Toolboxes) integradas le permite empezar
+                                a trabajar inmediatamente con algoritmos esenciales para su dominio. El entorno de escritorio invita a experimentar, explorar y descubrir. Todas estas herramientas y funciones de MATLAB est&aacute;n probadas rigurosamente
+                                y dise&ntilde;adas para trabajar juntas.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="scilab_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">Scilab</h3>
+                            <p class="w3-justify">
+                                Scilab es similar en su &aacute;mbito de aplicaci&oacute;n GNU Octave, MATLAB o PsiLAB. Incluye cientos de funciones matem&aacute;ticas y an&aacute;lisis de datos. Tiene un lenguaje de programaci&oacute;n de alto nivel que permite el acceso a estructuras
+                                de datos avanzadas, 2-D y funciones gr&aacute;ficas 3-D. Permite resolver problemas de optimizaci&oacute;n continuos y discretos restringidos y no restringidos, as&iacute; como algoritmos y herramientas est&aacute;ndar
+                                para modelado de sistemas mec&aacute;nicos, circuitos hidr&aacute;ulicos, sistemas de control.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="GNU_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">GNU Octave</h3>
+                            <p class="w3-justify">
+                                Octave proporciona una interfaz de l&iacute;nea de comandos para resolver problemas lineales y no lineales de manera num&eacute;rica, y desarrollar otros experimentos num&eacute;ricos utilizando para ello un lenguaje que en sun mayor&iacute;a es compatible
+                                con Matlab.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="comsol_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">COMSOL Multiphysics</h3>
+                            <p class="w3-justify">
+                                Entorno interactivo para el modelado y la simulaci&oacute;n de fen&oacute;menos f&iacute;sicos y procesos. Puede modelar virtualmente cualquier fen&oacute;meno f&iacute;sico que se pueda describir con ecuaciones diferenciales parciales (PDEs), incluyendo
+                                transferencia de calor, movimiento de fluidos, ac&uacute;stica, electromagnetismo y mec&aacute;nica estructural, soportando la integraci&oacute;n de problemas de diferentes campos (Multif&iacute;sica). Posee interfaces
+                                que permiten su integraci&oacute;n con Matlab, as&iacute; como la importaci&oacute;n y exportaci&oacute;n de la mayor parte de los formatos habituales de ficheros de CAD.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
