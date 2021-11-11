@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+    <title>3.3.3 Lenguajes para la Ciencia de Datos</title>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="gradient"></div>
+        <nav class="w3-bar nav_bar">
+            <a class="w3-bar-item w3-mobile" href="index.html">
+                <span><i class="fa fa-arrow-left"></i> Regresar</span>
+            </a>
+        </nav>
+        <aside class="w3-bar-block w3-cell" style="width:130px">
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_yellow" onclick="openLink(event, 'Intro')">
+                <span>
+                    ¿Qu&eacute; es la Ciencia de Datos?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_blue" onclick="openLink(event, 'BigData')">
+                <span>
+                    Big Data
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_pink" onclick="openLink(event, 'Proceso')">
+                <span>
+                    Proceso
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_green" onclick="openLink(event, 'Lenguajes')">
+                <span>
+                    Lenguajes utilizados
+                </span>
+            </button>
+        </aside>
+        <div id="interaction_panel" class="w3-cell">
+            <div class="w3-center" id="info_panel">
+                <div class="w3-container w3-padding">Selecciona los temas en el men&uacute; de la izquierda</div>
+
+                <div id="Intro" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>¿Qu&eacute; es la Ciencia de Datos?</h2>
+                    <p class="w3-justify">
+                        La ciencia de datos es hoy en d&iacute;a la herramienta fundamental para la explotaci&oacute;n de datos y la generaci&oacute;n de conocimiento. Entre los objetivos que persigue se encuentra la b&uacute;squeda de modelos que describan patrones y comportamientos
+                        a partir de los datos con el fin de tomar decisiones o hacer predicciones.
+                    </p>
+                    <p class="w3-justify">
+                        Durante los &uacute;ltimos a&ntilde;os, la cantidad de datos que circulan en la red es inmesurable. La ingente cantidad de datos disponibles, generados de forma continua e incesante por entidades, usuarios, servicios o dispositivos, ha implicado el desarrollo
+                        de nuevos m&eacute;todos cient&iacute;ficos e ingenieriles para disponer de sistemas y procedimientos capaces de almacenar, procesar y analizar dichos datos, generando de esta manera informaci&oacute;n y conocimiento en sectores
+                        tan dispares como la industria, banca, finanzas, marketing, seguros, redes sociales, comercio electr&oacute;nico, salud, gobierno electr&oacute;nico, ciudades inteligentes, biolog&iacute;a, medicina o ciencias de la tierra, por
+                        citar algunos.
+                    </p>
+                    <img src="https://cloudseguro.co/wp-content/uploads/2015/04/h.jpeg" class="figure-50" alt="Ciencia de datos">
+                </div>
+
+                <div id="BigData" class="w3-container city w3-animate-left" style="display:none">
+                    <h2>Big Data</h2>
+                    <p class="w3-justify">
+                        <i>Big data</i> es un t&eacute;rmino de origen ingl&eacute;s cuya traducci&oacute;n equivale a "datos masivos". Muchas son las definiciones que entidades y organizaciones han dado para el t&eacute;rmino big data, pero todas ellas
+                        se pueden resumir en el conjunto de datos cuyo tama&ntilde;o supera considerablemente la capacidad de captura, almacenado, gesti&oacute;n y an&aacute;lisis del software convencional de bases de datos.
+                    </p>
+                    <p class="w3-justify">
+                        Sin embargo, el concepto no hace referencia simplemente al tama&ntilde;o de la informaci&oacute;n, sino tambi&eacute;n a la variedad del contenido y a la velocidad con la que los datos se generan, almacenan y analizan. Estas dimensiones son las "3V" con
+                        las que la empresa Gartner describi&oacute; big data:
+                        <ul class="w3-justify">
+                            <li><b>Volumen.</b> Como su propio nombre indica, big data corresponde al gran volumen de datos que se generan diariamente en las empresas y organizaciones de todo el mundo.</li>
+                            <li><b>velocidad.</b> Es decir, c&oacute;mo de r&aacute;pido se est&aacute;n produciendo los datos, as&iacute; como la rapidez en la que se trata de satisfacer la demanda de &eacute;stos. </li>
+                            <li><b>Variedad.</b> Esta variedad de datos incluye datos estructurados (como las bases de datos) y no estructurados, datos jer&aacute;rquicos, documentos, correo electr&oacute;nico, datos de medici&oacute;n, video, im&aacute;genes
+                                fijas, audio, transacciones financieras, etc.</li>
+                        </ul>
+                    </p>
+                    <p class="w3-justify">
+                        Aunque, algunas organizaciones incluyen un par más de "V":
+                        <ul class="w3-justify">
+                            <li><b>Veracidad.</b> Big data debe ser capaz de tratar y analizar inteligentemente el enorme volumen de datos con el objetivo de obtener infomaci&oacute;n ver&iacute;dica y &uuac til que permita realizar tomas de decisiones basada
+                                en los datos m&aacute;s exactos.</li>
+                            <li><b>Valor.</b> Se refiere a los beneficios que trae consigo el uso de big data, como la reducci&oacute;n de costes, la eficiencia operativa y las mejoras de negocio.</li>
+                        </ul>
+                    </p>
+
+                    <p class="w3-justify">
+                        Por tanto, se define a la tecnolog&iacute;a big data como el conjunto de arquitecturas y herramientas inform&aacute;ticas destinadas a la manipulaci&oacute;n, gesti&oacute;n y an&aacute;lisis de grandes vol&uacute;menes de datos desde todo tipo de fuentes,
+                        dise&ntilde;adas para extraer valor y beneficio de los mismos, con una amplia variedad en su naturaleza, mediante procesos que permitan capturar, descubrir y analizar informaci&oacute;n a alta velocidad y con un coste reducido.
+                    </p>
+                    <img src="https://hipermediaciones.files.wordpress.com/2012/12/bigdata.jpg?w=1440" class="figure-50" alt="Ciencia de datos">
+                </div>
+                <div id="Proceso" class="w3-container city w3-animate-left" style="display:none">
+                    <h3>Proceso de la ciencia de datos</h3>
+                    <p class="w3-justify">
+                        El proceso de analizar y utilizar de datos sigue un flujo como el siguiente:
+                        <ul class="w3-justify">
+                            <li>
+                                <b>Planificaci&oacute;n. </b> Se debe definir el proyecto y los resultados que se esperan obtener de este.
+                            </li>
+                            <li>
+                                <b>Construir el modelo de datos.</b> Los cient&iacute;ficos de datos necesitan utilizar las herramientas y la capacidad de procesamiento adecuadas, adem&aacute;s del acceso a los datos correctos.
+                            </li>
+                            <li>
+                                <b>Evaluar el modelo.</b> Los modelos construidos deben tener un alto porcentaje de exactitud antes de que se puedan implementar productivamente. Estas evaluaciones implican m&eacute;tricas de evaluaci&oacute;n y visualizaciones
+                                para medir el rendimiento del modelo frente a los datos.
+                            </li>
+                            <li>
+                                <b>Explicar el modelos.</b> Los cient&iacute;ficos de datos desean recibir explicaciones automatizadas de la ponderaci&oacute;n relativa y la importancia de los factores que intervienen en la generaci&oacute;n de una predicci&oacute;n,
+                                junto con detalles explicativos espec&iacute;ficos del modelo sobre las predicciones del modelo.
+                            </li>
+                            <li>
+                                <b>Implementaci&oacute;n del modelo.</b> Una vez que se ha construido, evaluado y explicado correctamente el modelo, el siguiente paso es implementarlo en el sistema que lo requiere.
+                            </li>
+                            <li>
+                                <b>Monitorear el modelo. </b> Los modelos creados siempre deben monitorearse despu&eacute;s de la implementaci&oacute;n para garantizar su correcto funcionamiento, ya que al paso del tiempo, los datos con los que se entren&oacute;
+                                al modelo pueden ser obsoletos para futuras predicciones.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="Lenguajes" class="w3-container city w3-animate-left" style="display:none">
+                    <h3>Lenguajes de programaci&oacute;n para la ciencia de datos</h3>
+                    <p class="w3-justify">
+                        Algunos de los lenguajes en los que valdr&iacute;a la pena especializarse como cient&iacute;fico de datos son:
+                    </p>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="r_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">R</h3>
+                            <p class="w3-justify">
+                                R es un lenguaje poderoso que sobresale en una gran variedad de aplicaciones de visualizaci&oacute;n de datos y estad&iacute;stica, y ser de c&oacute;digo abierto permite tener una comunidad muy activa de contribuyentes. Su reciente crecimiento en popularidad
+                                es un testimonio de lo eficaz que es.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="python_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">Python</h3>
+                            <p class="w3-justify">
+                                Gran parte del proceso de ciencia de datos gira en torno a procesos ETL (extracci&oacute;n-transformaci&oacute;n-carga). Esto hace que la generalidad de Python encaje perfectamente. Adem&aacute;s, las librer&iacute;as como Tensorflow de Google hacen de
+                                Python un lenguaje muy emocionante para el aprendizaje autom&aacute;tico (machine learning).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="sql_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">SQL</h3>
+                            <p class="w3-justify">
+                                SQL es m&aacute;s &uacute;til como lenguaje de procesamiento de datos que como herramienta anal&iacute;tica avanzada. Sin embargo, gran parte del proceso de la ciencia de la informaci&oacute;n depende de ETL, y la longevidad y la eficiencia de SQL son
+                                una prueba de que es un lenguaje muy &uacute;til para el cient&iacute;fico de datos moderno.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="java_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">Java</h3>
+                            <p class="w3-justify">
+                                Muchas compa&ntilde;&iacute;as apreciar&aacute;n la capacidad de poder integrar el c&oacute;digo de producci&oacute;n de ciencia de datos directamente en la base de un c&oacute;digo ya existente, y adem&aacute;s encontramos que el rendimiento de Java
+                                y la seguridad de tipos son muy ventajosos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="scala_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">Scala</h3>
+                            <p class="w3-justify">
+                                Cuando se trata de usar la computaci&oacute;n en cl&uacute;ster para trabajar con Big Data, Scala + Spark son soluciones fant&aacute;sticas. Si tienes experiencia con Java y otros lenguajes de tipado est&aacute;tico, tambi&eacute;n apreciar&aacute;s las
+                                caracter&iacute;sticas de Scala. Sin embargo, si tu aplicaci&oacute;n no maneja los vol&uacute;menes de datos que justifiquen la complejidad agregada de Scala, es probable que tu productividad sea mucho mayor al usar otros
+                                idiomas, como R o Python.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="julia_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">Julia</h3>
+                            <p class="w3-justify">
+                                Julia es un lenguaje reciente, por lo que a&uacute;n no cuenta con tantas herramientas como R o Python, sin embargo valdr&iacute;a la pena conocerlo y ver c&oacute;mo evoluciona en un futuro.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-cell-row language_list">
+                        <div class="w3-cell-top">
+                            <div id="matlab_icon" class="language_icon"></div>
+                        </div>
+                        <div class="w3-cell language_info">
+                            <h3 class="w3-justify">MATLAB</h3>
+                            <p class="w3-justify">
+                                El uso generalizado de MATLAB en una variedad de campos cuantitativos y num&eacute;ricos tanto en la industria como en el mundo acad&eacute;mico, lo convierte en una opci&oacute;n seria para la ciencia de datos. Un caso de uso claro ser&iacute;a aquel
+                                en el que una aplicaci&oacute;n requiera una funcionalidad matem&aacute;tica intensiva y avanzada. De hecho, MATLAB fue dise&ntilde;ado espec&iacute;ficamente para esto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

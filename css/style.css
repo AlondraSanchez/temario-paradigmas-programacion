@@ -309,6 +309,30 @@ html {
     background: url(https://download.cahdroid.com/wp-content/uploads/2021/03/Comsol-Multiphysics-Free-Download.jpg) center / cover;
 }
 
+#r_icon {
+    background: url(https://ih1.redbubble.net/image.557982533.5501/st,small,507x507-pad,600x600,f8f8f8.jpg) center / cover;
+}
+
+#python_icon {
+    background: url(https://e7.pngegg.com/pngimages/761/45/png-clipart-professional-python-programmer-computer-programming-android-android-blue-logo-thumbnail.png) center / cover;
+}
+
+#sql_icon {
+    background: url(https://blog.desafiolatam.com/wp-content/uploads/2018/05/sql-logo.png) center / cover;
+}
+
+#java_icon {
+    background: url(https://cdn.worldvectorlogo.com/logos/java.svg) center / cover;
+}
+
+#scala_icon {
+    background: url(https://logowik.com/content/uploads/images/scala3486.jpg) center / cover;
+}
+
+#julia_icon {
+    background: url(https://yt3.ggpht.com/ytc/AKedOLRTag_BUufSPddbTf92uOWlkGEY8yZlTsv_1Q-bwQ=s900-c-k-c0x00ffffff-no-rj) center / cover;
+}
+
 .language_icon {
     width: 50px;
     height: 50px;
