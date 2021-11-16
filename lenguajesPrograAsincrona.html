@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+    <title>3.3.4 Lenguajes para progtamaci&oacute;n as&iacute;ncrona</title>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="gradient"></div>
+        <nav class="w3-bar nav_bar">
+            <a class="w3-bar-item w3-mobile" href="index.html">
+                <span><i class="fa fa-arrow-left"></i> Regresar</span>
+            </a>
+        </nav>
+        <aside class="w3-bar-block w3-cell" style="width:130px">
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_blue" onclick="openLink(event, 'Intro')">
+                <span>
+                    ¿Qu&eacute; es la programaci&oacute;n as&iacute;ncrona?
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_yellow" onclick="openLink(event, 'Js')">
+                <span>
+                    JavaScript
+                </span>
+            </button>
+            <button class="w3-bar-item w3-button tablink ribbon stabilo_melon" onclick="openLink(event, 'Cgatito')">
+                <span>
+                    C#
+                </span>
+            </button>
+        </aside>
+        <div id="interaction_panel" class="w3-cell">
+            <div id="info_panel">
+                <div class="w3-container w3-padding w3-center">Selecciona los temas en el men&uacute; de la izquierda</div>
+                <div id="Intro" class="w3-container city w3-animate-left w3-justify" style="display:none">
+                    <h2 class="w3-center">¿Qu&eacute; es la programaci&oacute;n as&iacute;ncrona?</h2>
+                    <p>
+                        Antes de poder hablar de programaci&oacute;n as&iacute;crona debemos entender la diferencia entre ejecuci&oacute;n s&iacute;ncrona y as&iacute;crona. Un c&oacute;digo s&iacute;ncrono es aquel c&oacute;digo donde cada instrucci&oacute;n espera a la anterior
+                        para ejecutarse mientras que un c&oacute;digo as&iacute;ncrono no espera a las instrucciones diferidas y contin&uacute;a con su ejecuci&oacute;n. Por lo general la asincron&iacute;a permite tener una mejor respuesta en las aplicaciones
+                        y reduce el tiempo de espera del cliente.
+                    </p>
+                    <p>
+                        Un modelo asincr&oacute;nico permite que ocurran varias cosas al mismo tiempo. Cuando comienzas una acci&oacute;n, tu programa contin&uacute;a ejecut&aacute;ndose. Cuando la acci&oacute;n termina, el programa es informado y tiene acceso al resultado (por
+                        ejemplo, los datos le&iacute;dos del disco).
+                    </p>
+                    <div class="w3-center">
+                        <img src="http://javadesde0.com/wp-content/uploads/Screenshot_39-4.jpg" alt="Sincronia y asincronia" class="figure-80">
+                    </div>
+                </div>
+
+                <div id="Js" class="w3-container city w3-animate-left w3-justify" style="display:none">
+                    <h2 class="w3-center">Programaci&oacute;n as&iacute;ncrona en JavaScript</h2>
+                    <p>
+                        JavaScript es un lenguaje de ejecuci&oacute;n sobre un solo hilo, esto significa que s&oacute;lo puede ejecutar una tarea a la vez. Cuando una operaci&oacute;n tarda demasiado o est&aacute; esperando la respuesta de otra, decimos que bloquea las dem&aacute;s
+                        instrucciones, precisamente porque JavaScript no puede ejecutar dos a la vez.
+                    </p>
+                    <p>
+                        Para solucionar esto, JavaScript introduce el event loop, o ciclo de eventos. El event loop se compone de dos componentes principales, una cola de mensajes y un ciclo que se encuentra iterando esta cola de mensajes. La programaci&oacute;n as&iacute;ncrona
+                        en JavaScript funciona empujando ciertas operaciones a esta cola de actividades, para que no bloqueen la ejecuci&oacute;n de c&oacute;digo mientras terminan, el trabajo del event loop es estar preguntando las operaciones de la
+                        cola de actividades si ya han finalizado, y cuando lo hacen, reanuda la ejecuci&oacute;n de dicha operaci&oacute;n, la recupera por as&iacute; decirlo.
+                    </p>
+                    <p>
+                        Javascript es un lenguaje que utiliza la programaci&oacute;n as&iacute;ncrona dirigida por eventos para el tratamiento de la concurrencia, es decir para realizar m&aacute;s de una tarea simultaneamente. Lo m&aacute;s importante de todo esto es conocer
+                        que todos los elementos as&iacute;ncronos de javascript son coordinados por un mecanismo denominado el bucle de eventos.
+                    </p>
+                    <h3>
+                        Concurrencia y paralelismo
+                    </h3>
+                    <p>
+                        Concurrencia y paralelismo son conceptos relacionados pero con un importante matiz de diferencia entre ellos. Es por esto que muy a menudo se confunden y se utilizan err&oacute;neamente.
+                        <ul>
+                            <li><b>Concurrencia. </b>Cuando dos o mas tareas progresan simult&aacute;neamente.</li>
+                            <li><b>Paralelismo. </b>Cuando dos o mas tareas se ejecutan, literalmente, a la vez, en el mismo instante de tiempo.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        N&oacute;tese la diferencia: que varias tareas progresen simult&aacute;neamente no tiene porque significar que sucedan al mismo tiempo. Mientras que la concurrencia aborda un problema m&aacute;s general, el paralelismo es un sub-caso de la concurrencia
+                        donde las cosas suceden exactamente al mismo tiempo.
+                    </p>
+                    <h3 class="w3-justify">Loop de eventos</h3>
+                    <div class="w3-center">
+                        <img src="https://images.squarespace-cdn.com/content/v1/56cdb491a3360cdd18de5e16/1517395005323-XQIZ41T7ZUES4094HW12/event_loop_model_es.png?format=1000w" alt="Loop de eventos" class="figure-80">
+                    </div>
+                    <h4><i>Call Stack</i></h4>
+                    <p>
+                        Traducido, pila de llamadas, se encarga de albergar las instrucciones que deben ejecutarse. Nos indica en que punto del programa estamos, por donde vamos. Cada llamada a funci&oacute;n de nuestra aplicaci&oacute;n, entra a la pila generando un nuevo <i>frame</i>                        (bloque de memoria reservada para los argumentos y variables locales de dicha funci&oacute;n). Por tanto, cuando se llama a una funci&oacute;n, su frame es insertado arriba en la pila, cuando una funci&oacute;n se ha completado
+                        y devuelve, su frame se saca de la pila tambi&eacute;n por arriba.
+                    </p>
+
+                    <div class="w3-center">
+
+                        <img src="https://images.squarespace-cdn.com/content/v1/56cdb491a3360cdd18de5e16/1517395032344-N16X5ZVQGMISJLUPWJ4U/call_stack_animated.gif?format=1000w" alt="Call stack" class="figure">
+                    </div>
+                    <h4><i>Heap</i></h4>
+                    <p>
+                        Regi&oacute;n de memoria libre, normalmente de gran tama&ntilde;o, dedicada al alojamiento din&aacute;mico de objetos. Es compartida por todo el programa y controlada por un recolector de basura que se encarga de liberar aquello que no se necesita.
+                    </p>
+                    <h4><i>Queue (Cola)</i></h4>
+                    <p>
+                        Cada vez que nuestro programa recibe una notificaci&oacute;n del exterior o de otro contexto distinto al de la aplicaci&oacute;n (como es el caso de operaciones as&iacute;ncronas), el mensaje se inserta en una cola de mensajes pendientes y se registra
+                        su callback correspondiente. Recordemos que un callback era la funci&oacute;n que se ejecutar&aacute; como respuesta.
+                    </p>
+
+                    <h4><i>Loop de Eventos</i></h4>
+                    <p>
+                        Cuando la pila de llamadas (call stack) se vac&iacute;a, es decir, no hay nada m&aacute;s que ejecutar, se procesan los mensajes de la cola. Con cada 'tick' del bucle de eventos, se procesa un nuevo mensaje. Este procesamiento consiste en llamar al callback
+                        asociado a cada mensaje lo que dar&aacute; lugar a un nuevo frame en la pila de llamadas. Este frame inicial puede derivar en muchos m&aacute;s, todo depende del contenido del callback. Un mensaje se termina de procesar cuando
+                        la pila vuleve a estar vac&iacute;a de nuevo. A este comportamiento se le conoce como 'run-to-completion'.
+                    </p>
+
+                    <h4><i>Callback</i></h4>
+                    <p>
+                        Un callback no es m&aacute;s que una funci&oacute;n que se pasa como argumento de otra funci&oacute;n, y que ser&aacute; invocada para completar alg&uacute;n tipo de acci&oacute;n. En nuestro contexto as&iacute;ncrono, un callback representa el '¿Qu&eacute;
+                        quieres hacer una vez que tu operaci&oacute;n as&iacute;ncrona termine?'. Por tanto, es el trozo de c&oacute;digo que ser&aacute; ejecutado una vez que una operaci&oacute;n as&iacute;ncrona notifique que ha terminado. Esta ejecuci&oacute;n
+                        se har&aacute; en alg&uacute;n momento futuro, gracias al mecanismo que implementa el bucle de eventos.
+                    </p>
+
+                    <h4><i>Promesas</i></h4>
+                    <p>
+                        Una promesa es un objeto que representa el resultado de una operación asíncrona. Este resultado podría estar disponible ahora o en el futuro. Las promesas se basan en callbacks pero añaden azúcar para un mejor manejo y sintaxis.
+                    </p>
+                </div>
+                <div id="Cgatito" class="w3-container w3-justify city w3-animate-left" style="display:none">
+                    <h2 class="w3-center">Programaci&oacute;n as&iacute;ncrona en C#</h2>
+                    <p>
+                        C# tiene un modelo de programaci&oacute;n asincr&oacute;nico de nivel de lenguaje que permite escribir f&aacute;cilmente c&oacute;digo asincr&oacute;nico sin tener que hacer malabares con las devoluciones de llamada o ajustarse a una biblioteca que admita
+                        la asincron&iacute;a.
+                    </p>
+
+                    <p>
+                        El n&uacute;cleo de la programaci&oacute;n asincr&oacute;nica son los objetos Task y Task
+                        <T>, que modelan las operaciones asincr&oacute;nicas. Son compatibles con las palabras clave async y await.
+                    </p>
+                    <p>
+                        La palabra clave await genera control para el autor de la llamada del m&eacute;todo que ha realizado await, y permite en &uacute;ltima instancia una interfaz de usuario con capacidad de respuesta o un servicio flexible.
+                    </p>
+
+                    <h3>Ejemplo</h3>
+                    <p>
+                        Para explicar c&oacute;mo se prepara un desayuno, probablemente escribir&aacute; unas instrucciones parecidas a las que se recogen en la lista siguiente:
+                        <ol>
+                            <li>Servir una taza de caf&eacute;.</li>
+                            <li>Calentar un sat&eacute;n y fre&iacute;r huevos.</li>
+                            <li>Fre&iacute;r tocino</li>
+                            <li>Tostar dos rebanadas de pan</li>
+                            <li>Untar mermelada en el pan</li>
+                            <li>Servir jugo de naranja en un vaso</li>
+                        </ol>
+                    </p>
+                    <p>
+                        La preparaci&oacute;n del desayuno es un buen ejemplo de un trabajo asincr&oacute;nico que no es paralelo. Una persona (o un subproceso) puede controlar todas estas tareas. Siguiendo con la analog&iacute;a del desayuno, una persona puede preparar el desayuno
+                        asincr&oacute;nicamente si comienza la tarea siguiente antes de que finalice la anterior. Los alimentos se cocinan tanto si una persona supervisa el proceso como si no. En cuanto se empieza a calentar la sart&eacute;n para los
+                        huevos, se puede comenzar a fre&iacute;r el tocino. Una vez que el tocino se est&eacute; haciendo, se puede poner el pan en la tostadora.
+                    </p>
+                    <p>
+                        La clase System.Threading.Tasks.Task y los tipos relacionados se pueden usar para razonar sobre las tareas que est&aacute;n en curso. Esto le permite escribir c&oacute;digo que se asemeje m&aacute;s a la manera en que realmente se prepara el desayuno.
+                        Para ello, cocinar&aacute; los huevos, el tocino y las tostadas al mismo tiempo. Como cada uno de estos elementos requiere una acci&oacute;n, se ocupar&aacute; de esa tarea, se encargar&aacute; de la acci&oacute;n siguiente y esperar&aacute;
+                        por todo lo que necesite su atenci&oacute;n.
+                    </p>
+                    <p>
+                        Comenzar&aacute; una tarea y conservar&aacute; el objeto Task que representa el trabajo. Llevar&aacute; a cabo una instrucci&oacute;n await para esperar por cada tarea antes de trabajar con su resultado.
+                    </p>
+                    <div class="w3-panel w3-card w3-light-grey">
+                        C&oacute;digo para simular la preparaci&oacute;n de un desayuno de manera as&iacute;ncrona en C#
+                        <div class="w3-code notranslate">
+                            Coffee cup = PourCoffee(); <br> Console.WriteLine("Coffee is ready");<br> Task &#60;Egg&#62; eggsTask = FryEggsAsync(2);<br> Task &#60;Bacon&#62; baconTask = FryBaconAsync(3);<br> Task &#60;Toast&#62; toastTask = ToastBreadAsync(2);<br>                            Toast toast = await toastTask;<br> ApplyButter(toast);
+                            <br> ApplyJam(toast);
+                            <br> Console.WriteLine("Toast is ready");<br> Juice oj = PourOJ();<br> Console.WriteLine("Oj is ready");<br> Egg eggs = await eggsTask;<br> Console.WriteLine("Eggs are ready");<br> Bacon bacon = await baconTask;<br> Console.WriteLine("Bacon
+                            is ready");<br> Console.WriteLine("Breakfast is ready!");<br>
+                        </div>
+                    </div>
+                    <div class="w3-center">
+                        <img src="https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/concepts/async/media/asynchronous-breakfast.png" alt="Desayuno asincrono" class="figure-80">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
