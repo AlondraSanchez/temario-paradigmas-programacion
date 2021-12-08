@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/eventos.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="gradient"></div>
+    <div class="main_container">
+        <nav class="w3-bar nav_bar">
+            <a class="w3-bar-item w3-mobile" href="index.html">
+                <span><i class="fa fa-arrow-left"></i> Regresar</span>
+            </a>
+        </nav>
+        <div class="w3-container">
+            <div class="w3-panel w3-indigo">
+                <h1 class="w3-center w3-serif">Paradigmas de Programaci&oacute;n</h1>
+                <h2 class="w3-center w3-serif">UNIDAD TEM&Aacute;TICA III</h2>
+                <h3 class="w3-center w3-serif">3.1.3 Tipos de eventos y notificaciones</h3>
+            </div>
+            <div class="w3-container w3-monospace w3-justify">
+
+                <h1 class="w3-monospace">¿Qu&eacute; es un evento?</h1>
+                <p>
+                    Un evento es una accion que es reconocida por un objeto y que normalmente es provocada por el usuario al interactuar con la interfaz del programa. Es una condición que surge durante la ejecución de un programa y que requiere alguna acción por parte del
+                    sistema. Cada evento es diferente por naturaleza, algunos requieren que el programa recobre y muestre cierta información, y otros que se inicien algunos cálculos y cambios de estado. Los eventos incluyen al mouse, al teclado, una interfaz
+                    de usuario y las acciones que se deben activar en el programa cuando ocurran. Esto significa que el usuario debe interactuar con un objeto en el programa, como hacer clic en un botón del mouse, usar el teclado para seleccionar un botón,
+                    etc.
+                </p>
+                <p>
+                    Existen m&uacute;ltiples tipos de eventos, pero los principales son los eventos que se activan con el mouse (click, doble click, etc.), eventos que se activan seg&uacute;n alguna circunsancia (como el focus, scroll, arrastrar, soltar, etc.) o eventos
+                    que se activan con entradas del teclado del usuario (teclas presionadas o combinaciones de estas).
+                </p>
+                <p>
+                    Para el caso de eventos del teclado, los lenguajes de programaci&oacute;n cuentan con m&eacute;todos para poder detectar el tipo de tecla que se est&aacute; presionando, es decir si se est&aacute; presionando una tecla alfanum&eacute;rica, tecla espacio,
+                    tecla enter, tecla alt, tecla ctrl, etc.
+                </p>
+                <h2 class="w3-monospace">A continuaci&oacute;n se explica c&oacute;mo se activan algunos eventos</h2>
+
+            </div>
+        </div>
+        <div class="w3-row w3-monospace">
+
+            <div class="w3-panel w3-third w3-center">
+                <div class="w3-card-4 w3-white">
+
+                    <div class="w3-container w3-indigo">
+                        <h2 class="w3-monospace">Evento Click</h2>
+                    </div>
+
+                    <p class="w3-margin-left w3-margin-right">
+                        El evento click se activa al hacer click sobre un elemento. Generalmente este evento está asociado con botones.
+                    </p>
+
+                    <form class="w3-container w3-padding-16">
+                        <label>Haz click sobre el bot&oacute;n</label> <br>
+                        <button class="w3-btn w3-ripple w3-indigo" onclick="activarEventoClick()">Button Button</button>
+                    </form>
+
+                    <p class="w3-margin-left w3-margin-right" ondblclick="activarDobleClick()">
+                        Además del Evento click existe el evento doble click. Intenta hacer doble click sobre este texto para activar el evento.
+                    </p>
+                </div>
+            </div>
+            <div class="w3-panel w3-third w3-center">
+                <div class="w3-card-4 w3-white">
+
+                    <div class="w3-container w3-indigo">
+                        <h2 class="w3-monospace">Evento Focus</h2>
+                    </div>
+
+                    <p class="w3-margin-left w3-margin-right">
+                        El evento focus se activa cuando colocas el cursor está apuntando hacia un elemento. Por lo general este evento es aplicado a campos de texto. Este evento tiene su contraparte que se activa cuando el cursor ya no apunta en el elemento.
+                    </p>
+
+                    <form class="w3-container w3-padding-16">
+
+                        <label>Coloca el cursor sobre el campo de texto</label>
+                        <input class="w3-input w3-border w3-round-large" type="text" onfocus="activarEventoFocus()" onblur="desactivarEventoFocus()">
+                        <label id="msgFocus"></label>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="w3-panel w3-third w3-center">
+                <div class="w3-card-4 w3-white">
+
+                    <div class="w3-container w3-indigo">
+                        <h2 class="w3-monospace">Eventos del teclado</h2>
+                    </div>
+
+                    <p class="w3-margin-left w3-margin-right">
+                        Los eventos del teclado se dan cuando el usuario presiona teclas en el teclado. Existe un evento para detectar cuando una tecla se presiona, y un evento para detectar cuando una tecla se deja de presionar.
+                    </p>
+
+                    <form class="w3-container w3-padding-16">
+                        <label>Prueba a mantener presionada una tecla para activar el evento de tecla presionada, y luego sueltala para ver el evento contrario</label> <br>
+                        <input class="w3-input w3-border w3-round-large" type="text" onkeydown="activarEventoTeclaPresionada()" onkeyup="desactivarEventoTeclaPresionada()">
+                        <label id="msgTecla">Este texto cambiara de color segun presiones o dejes de presionar una tecla</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

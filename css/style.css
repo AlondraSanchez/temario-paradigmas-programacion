@@ -21,7 +21,7 @@ html {
     background: linear-gradient(45deg, rgba(195, 156, 242, 1) 0%, rgba(45, 150, 253, 1) 100%);
 }
 
-#title_container,
+.title_container,
 #central_panel {
     position: relative;
     width: 80%;
@@ -57,7 +57,7 @@ html {
     margin-bottom: 50px;
 }
 
-#card_container {
+.card_container {
     position: relative;
     margin: auto;
     width: 80%;
@@ -65,27 +65,30 @@ html {
     padding-bottom: 50px;
 }
 
+.main_container {
+    position: relative;
+    z-index: 10;
+    width: 80%;
+    margin: auto;
+    background-color: #f6f4eb;
+}
+
 .title_info {
     position: relative;
     z-index: 10;
-    display: inline-block;
     vertical-align: middle;
+    color: #f6f4eb;
+    padding: 50px;
 }
 
-#title_info_iz {
+.title_info_white {
+    position: relative;
+    z-index: 10;
     color: #363633;
     background-color: #f6f4eb;
-    width: 40%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
-#title_info_der {
-    color: #f6f4eb;
-    width: 59.5%;
-}
-
-#cristal_title {
+.cristal_title {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -172,6 +175,14 @@ html {
 
 #card_pa {
     background: url('https://dominiotic.com/wp-content/uploads/2018/09/programming-journal-overview.jpg') center / cover;
+}
+
+#card_evt {
+    background: url('https://i.stack.imgur.com/YrZrs.jpg') center / cover;
+}
+
+#card_evt_handle {
+    background: url('https://prografacilsite.files.wordpress.com/2017/06/012.png') center / cover;
 }
 
 .card_resume {
