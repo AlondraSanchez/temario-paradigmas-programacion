@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Detecci&oacute;n de eventos</title>
+    <!--CSS del teclado-->
+    <link rel="stylesheet" href="css/keyboardstyle.css">
+
+    <!--Script que realiza el manejo de eventos-->
+    <script>
+        //En esta variable se almacena lo que el usuario teclea
+        let textoGenerado = '';
+
+        //Esta función se activa al presionar una tecla
+        function activarTecla(teclaPresionada) {
+            //Esta variable almacena el componente que muestra el texto que el usuario teclea
+            let contenedorTexto = document.getElementById("texto-generado");
+            //En esta variable se lee el codigo de las teclas del teclado
+            let teclad = teclaPresionada.code;
+            //En esta variable se lee la tecla que presiono el teclado
+            let letra = teclaPresionada.key;
+            //Detectar qué tipo de tecla fue presionada
+            if (teclad.includes("Key") || teclad.includes("Digit") || teclad.includes("Numpad")) {
+                //Si es una letra, se agrega al texto
+                textoGenerado += letra;
+            } else {
+                //Detectamos teclas que no sean letras o numeros
+                document.getElementById("texto-mensaje").innerHTML = "Presionaste la tecla " + teclad;
+                //Cuando se detecte la tecla backspace, el texto que se muestra también debe cambiar
+                if (teclad === "Backspace") {
+                    textoGenerado = textoGenerado.slice(0, textoGenerado.length - 1);
+                }
+                //Si la tecla presionada es el espacio, se establece su ID con fines visuales
+                if (teclad === "Space") {
+                    letra = "space";
+                }
+            }
+            //Se establece el componente visual corresopndiente a la tecla que se presionó
+            let componente = document.getElementById("tecla" + letra.toUpperCase());
+            //Se activa el estilo 'spanActive' con fines visuales (esto activa el efecto visual de pulsar una tecla sobre el teclado
+            //que se muestra en la página)
+            if (componente != null) {
+                componente.className = "spanActive";
+            }
+            //Se actualiza el texto que se muestra en la página
+            contenedorTexto.innerHTML = textoGenerado;
+        }
+
+        //Esta función se activa solamente con fines visuales. Cuando se pulsa una tecla, se muestra el efecto de tecla presionada
+        //Por lo tanto, cuando se deja de pulsar una tecla, esta debe volver a su estado normal
+        function desactivarTecla(teclaPresionada) {
+            let teclad = teclaPresionada.code;
+            letra = teclaPresionada.key;
+            let componente;
+            if (teclad === "Space") {
+                componente = document.getElementById("teclaSPACE")
+            } else {
+                componente = document.getElementById("tecla" + letra.toUpperCase());
+            }
+            if (componente != null) {
+                componente.className = "";
+            }
+        }
+
+        //Esta función se activa cuando se hace click sobre los botones del teclado de la página
+        //Recibe como parámetro la tecla que se presiono (este parametro se asigna en cada componente <span> de cada tecla)
+        function activarTeclaConMouse(teclaClickeada) {
+            //Se obtiene el componente donde se muestra el texto tecleado
+            let contenedorTexto = document.getElementById("texto-generado");
+            //Entra al switch case dependiendo de la tecla que se presiono
+            switch (teclaClickeada) {
+                case "SHIFT":
+                    document.getElementById("texto-mensaje").innerHTML = "Presionaste la tecla Shift";
+                    break;
+                case "BORRAR":
+                    textoGenerado = textoGenerado.slice(0, textoGenerado.length - 1);
+                    document.getElementById("texto-mensaje").innerHTML = "Presionaste la tecla Backspace";
+                    break;
+                case "ALT":
+                    document.getElementById("texto-mensaje").innerHTML = "Presionaste la tecla Alt";
+                    break;
+                case "ESPACIO":
+                    document.getElementById("texto-mensaje").innerHTML = "Presionaste la tecla Space";
+                    break;
+                case "ENTER":
+                    document.getElementById("texto-mensaje").innerHTML = "Presionaste la tecla Enter";
+                    break;
+                default:
+                    textoGenerado += teclaClickeada;
+                    break;
+            }
+            //Se actualiza el texto que se muestra en la página
+            contenedorTexto.innerHTML = textoGenerado;
+        }
+    </script>
+</head>
+
+<!--El atributo onkeydown indica qué función de JavaScript debe ejecutarse cuando se presiona una tecla,
+	el parámetro que recibe es el evento que se esta accionando (en este caso, el teclado)
+-->
+
+<body onkeydown="activarTecla(event)" onkeyup="desactivarTecla(event)">
+    <!-- partial:index.partial.html -->
+    <nav>
+        <a href="deteccionEventos.html">
+            Regresar
+        </a>
+    </nav>
+    <div class="texto-escrito">
+        <h1 id="texto-mensaje" style="color: blueviolet;">Hola!</h1>
+        <p id="texto-generado"></p>
+    </div>
+    <div id="container">
+        <div class="base">
+            <div class="line1">
+                <span id="teclaQ" onclick="activarTeclaConMouse('Q')">Q</span>
+                <span id="teclaW" onclick="activarTeclaConMouse('W')">W</span>
+                <span id="teclaE" onclick="activarTeclaConMouse('E')">E</span>
+                <span id="teclaR" onclick="activarTeclaConMouse('R')">R</span>
+                <span id="teclaT" onclick="activarTeclaConMouse('T')">T</span>
+                <span id="teclaY" onclick="activarTeclaConMouse('Y')">Y</span>
+                <span id="teclaU" onclick="activarTeclaConMouse('U')">U</span>
+                <span id="teclaI" onclick="activarTeclaConMouse('I')">I</span>
+                <span id="teclaO" onclick="activarTeclaConMouse('O')">O</span>
+                <span id="teclaP" onclick="activarTeclaConMouse('P')">P</span>
+            </div>
+            <div class="line2">
+                <span id="teclaA" onclick="activarTeclaConMouse('A')">A</span>
+                <span id="teclaS" onclick="activarTeclaConMouse('S')">S</span>
+                <span id="teclaD" onclick="activarTeclaConMouse('D')">D</span>
+                <span id="teclaF" onclick="activarTeclaConMouse('F')">F</span>
+                <span id="teclaG" onclick="activarTeclaConMouse('G')">G</span>
+                <span id="teclaH" onclick="activarTeclaConMouse('H')">H</span>
+                <span id="teclaJ" onclick="activarTeclaConMouse('J')">J</span>
+                <span id="teclaK" onclick="activarTeclaConMouse('K')">K</span>
+                <span id="teclaL" onclick="activarTeclaConMouse('L')">L</span>
+            </div>
+            <div class="line3">
+                <span id="teclaSHIFT" onclick="activarTeclaConMouse('SHIFT')"><svg enable-background="new 0 0 500 500" id="arrow" version="1.1" viewBox="0 0 500 500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M433.704,237.465c4.456,6.086,7.092,13.539,7.092,21.622  c0,20.079-16.266,36.341-36.344,36.341h-36.341c-9.991,0-18.173,8.18-18.173,18.172v109.025c0,20.079-16.262,36.341-36.341,36.341  H186.4c-20.079,0-36.34-16.262-36.34-36.341V313.6c0-9.992-8.181-18.172-18.172-18.172H95.547  c-20.079,0-36.342-16.262-36.342-36.341c0-8.083,2.635-15.536,7.08-21.622L217.747,54.388c17.807-17.808,46.695-17.808,64.505,0  L433.704,237.465z"/></svg></span>
+                <span id="teclaZ" onclick="activarTeclaConMouse('Z')">Z</span>
+                <span id="teclaX" onclick="activarTeclaConMouse('X')">X</span>
+                <span id="teclaC" onclick="activarTeclaConMouse('C')">C</span>
+                <span id="teclaV" onclick="activarTeclaConMouse('V')">V</span>
+                <span id="teclaB" onclick="activarTeclaConMouse('B')">B</span>
+                <span id="teclaN" onclick="activarTeclaConMouse('N')">N</span>
+                <span id="teclaM" onclick="activarTeclaConMouse('M')">M</span>
+                <span id="teclaBACKSPACE" onclick="activarTeclaConMouse('BORRAR')"><svg baseProfile="tiny" id="backspace" version="1.2" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M19.5,5h-10C8.234,5,6.666,5.807,5.93,6.837L3.32,10.49c-0.642,0.898-1.182,1.654-1.199,1.679  C2,12.344,1.999,12.661,2.124,12.833c0.023,0.033,0.555,0.777,1.188,1.664l2.619,3.667C6.666,19.193,8.233,20,9.5,20h10  c1.379,0,2.5-1.122,2.5-2.5v-10C22,6.122,20.879,5,19.5,5z M17.207,14.793c0.391,0.391,0.391,1.023,0,1.414  C17.012,16.402,16.756,16.5,16.5,16.5s-0.512-0.098-0.707-0.293L13.5,13.914l-2.293,2.293C11.012,16.402,10.756,16.5,10.5,16.5  s-0.512-0.098-0.707-0.293c-0.391-0.391-0.391-1.023,0-1.414l2.293-2.293l-2.293-2.293c-0.391-0.391-0.391-1.023,0-1.414  s1.023-0.391,1.414,0l2.293,2.293l2.293-2.293c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L14.914,12.5L17.207,14.793z"/></svg></span>
+            </div>
+            <div class="line4">
+                <span id="teclaALT" onclick="activarTeclaConMouse('ALT')"><svg viewBox="0 0 48 48" id="smile" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M23.99 4c-11.05 0-19.99 8.95-19.99 20s8.94 20 19.99 20c11.05 0 20.01-8.95 20.01-20s-8.96-20-20.01-20zm.01 36c-8.84 0-16-7.16-16-16s7.16-16 16-16 16 7.16 16 16-7.16 16-16 16zm7-18c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-14 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm7 13c4.66 0 8.61-2.91 10.21-7h-20.42c1.6 4.09 5.55 7 10.21 7z"/></svg></span>
+                <span id="teclaSPACE" onclick="activarTeclaConMouse('ESPACIO')">Space</span>
+                <span id="teclaENTER" onclick="activarTeclaConMouse('ENTER')">Return</span>
+            </div>
+        </div>
+    </div>
+    <p>
+        El dise&ntilde;o del teclado fue desarrollado por <a href="https://codepen.io/kulpreets">Kulpreets</a>
+    </p>
+    <p>
+        <a href="https://drive.google.com/file/d/1Spqzws_DRbQSxQrmQEj6xyRFbYW7yTuR/view?usp=sharing" target="blank_">Descarga el c&oacute;digo completo aqu&iacute;</a>
+    </p>
+    <p>
+        Links &uacute;tiles:
+        <ul>
+            <li>
+                <a href="https://keycode.info/" target="blank_">Key codes (JavaScript)</a>
+            </li>
+            <li><a href="https://www.w3schools.com/jsref/event_key_keycode.asp" target="blank_">Manejo de keycode (JavaScript)</a></li>
+            <li><a href="https://www.w3schools.com/jsref/event_key_key.asp" target="blank_">Manejo de propiedad key (JavaScript)</a></li>
+        </ul>
+    </p>
+    <!-- partial -->
+</body>
+
+</html>
